@@ -1,3 +1,12 @@
+http://localhost:3000/
+http://localhost:3000/retrievepassword
+http://localhost:3000/retrievepasswordsent
+http://localhost:3000/changepassword
+http://localhost:3000/changepasswordsuccess
+http://localhost:3000/register
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
