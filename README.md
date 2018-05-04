@@ -1,8 +1,13 @@
 http://localhost:3000/
+
 http://localhost:3000/retrievepassword
+
 http://localhost:3000/retrievepasswordsent
+
 http://localhost:3000/changepassword
+
 http://localhost:3000/changepasswordsuccess
+
 http://localhost:3000/register
 
 
