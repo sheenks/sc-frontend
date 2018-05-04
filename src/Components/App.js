@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './App.css';
-import { Button } from 'reactstrap';
+import './app.css';
+//import { Button } from 'reactstrap';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-class App extends Component {
+import UserLogin from './UserLogin';
+import RetrievePassword from './RetrievePassword';
+import RetrievePasswordSent from './RetrievePasswordSent';
+import ChangePassword from './ChangePassword';
+import ChangePasswordSuccess from './ChangePasswordSuccess';
+import Register from './Register';
+import NotFound from './404';
+
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-          <Button color="primary">primary</Button>{' '}
-          <Button color="secondary">secondary</Button>{' '}
-          <Button color="success">success</Button>{' '}
-          <Button color="info">info</Button>{' '}
-          <Button color="warning">warning</Button>{' '}
-          <Button color="danger">danger</Button>{' '}
-          <Button color="link">link</Button>
 
-        </p>
-      </div>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={UserLogin} />
+            <Route exact path="/RetrievePassword" component={RetrievePassword} />
+            <Route exact path="/RetrievePasswordSent" component={RetrievePasswordSent} />
+            <Route exact path="/ChangePassword" component={ChangePassword} />
+            <Route exact path="/ChangePasswordSuccess" component={ChangePasswordSuccess} />
+            <Route exact path="/Register" component={Register} />
+
+            
+            <Route component={NotFound} />
+          </Switch>
+        </BrowserRouter>
+
+
+        
+
     );
   }
 }
-
-export default App;
